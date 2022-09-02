@@ -66,17 +66,17 @@ CONFIG_DIFFS = {
     'model_1': {
         # Jumper et al. (2021) Suppl. Table 5, Model 1.1.1
         'data.common.max_extra_msa': 5120,
-        'data.common.reduce_msa_clusters_by_max_templates': True,
-        'data.common.use_templates': True,
-        'model.embeddings_and_evoformer.template.embed_torsion_angles': True,
-        'model.embeddings_and_evoformer.template.enabled': True
+        'data.common.reduce_msa_clusters_by_max_templates': False,
+        'data.common.use_templates': False,
+        'model.embeddings_and_evoformer.template.embed_torsion_angles': False,
+        'model.embeddings_and_evoformer.template.enabled': False
     },
     'model_2': {
         # Jumper et al. (2021) Suppl. Table 5, Model 1.1.2
-        'data.common.reduce_msa_clusters_by_max_templates': True,
-        'data.common.use_templates': True,
-        'model.embeddings_and_evoformer.template.embed_torsion_angles': True,
-        'model.embeddings_and_evoformer.template.enabled': True
+        'data.common.reduce_msa_clusters_by_max_templates': False,
+        'data.common.use_templates': False,
+        'model.embeddings_and_evoformer.template.embed_torsion_angles': False,
+        'model.embeddings_and_evoformer.template.enabled': False
     },
     'model_3': {
         # Jumper et al. (2021) Suppl. Table 5, Model 1.2.1
