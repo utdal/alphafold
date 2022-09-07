@@ -131,7 +131,7 @@ flags.DEFINE_boolean('use_gpu_relax', None, 'Whether to relax on GPU. '
 
 FLAGS = flags.FLAGS
 
-MAX_TEMPLATE_HITS = 20
+MAX_TEMPLATE_HITS = 0
 RELAX_MAX_ITERATIONS = 0
 RELAX_ENERGY_TOLERANCE = 2.39
 RELAX_STIFFNESS = 10.0
