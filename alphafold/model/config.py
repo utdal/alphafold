@@ -534,7 +534,7 @@ CONFIG_MULTIMER = ml_collections.ConfigDict({
                     'num_bins': 39
                 },
                 'enabled': False,
-                'max_templates': 4,
+                'max_templates': 0,
                 'num_channels': 64,
                 'subbatch_size': 128,
                 'template_pair_stack': {
