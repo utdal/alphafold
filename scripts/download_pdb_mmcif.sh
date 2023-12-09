@@ -39,15 +39,15 @@ ROOT_DIR="${DOWNLOAD_DIR}/pdb_mmcif"
 RAW_DIR="${ROOT_DIR}/raw"
 MMCIF_DIR="${ROOT_DIR}/mmcif_files"
 
-echo "Running rsync to fetch all mmCIF files (note that the rsync progress estimate might be inaccurate)..."
-echo "If the download speed is too slow, try changing the mirror to:"
-echo "  * rsync.ebi.ac.uk::pub/databases/pdb/data/structures/divided/mmCIF/ (Europe)"
-echo "  * ftp.pdbj.org::ftp_data/structures/divided/mmCIF/ (Asia)"
-echo "or see https://www.wwpdb.org/ftp/pdb-ftp-sites for more download options."
-mkdir --parents "${RAW_DIR}"
-rsync --recursive --links --perms --times --compress --info=progress2 --delete --port=33444 \
-  rsync.rcsb.org::ftp_data/structures/divided/mmCIF/ \
-  "${RAW_DIR}"
+# echo "Running rsync to fetch all mmCIF files (note that the rsync progress estimate might be inaccurate)..."
+# echo "If the download speed is too slow, try changing the mirror to:"
+# echo "  * rsync.ebi.ac.uk::pub/databases/pdb/data/structures/divided/mmCIF/ (Europe)"
+# echo "  * ftp.pdbj.org::ftp_data/structures/divided/mmCIF/ (Asia)"
+# echo "or see https://www.wwpdb.org/ftp/pdb-ftp-sites for more download options."
+# mkdir --parents "${RAW_DIR}"
+# rsync --recursive --links --perms --times --compress --info=progress2 --delete --port=33444 \
+#   rsync.rcsb.org::ftp_data/structures/divided/mmCIF/ \
+#   "${RAW_DIR}"
 
 echo "Unzipping all mmCIF files..."
 find "${RAW_DIR}/" -type f -iname "*.gz" -exec gunzip {} +

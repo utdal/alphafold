@@ -1863,15 +1863,17 @@ class EmbeddingsAndEvoformer(hk.Module):
 
     # Embed templates into the pair activations.
     # Jumper et al. (2021) Suppl. Alg. 2 "Inference" lines 9-13
-    if c.template.enabled:
-      template_batch = {k: batch[k] for k in batch if k.startswith('template_')}
-      template_pair_representation = TemplateEmbedding(c.template, gc)(
-          pair_activations,
-          template_batch,
-          mask_2d,
-          is_training=is_training)
+    # if c.template.enabled:
+    #   template_batch = {k: batch[k] for k in batch if k.startswith('template_')}
+    #   template_pair_representation = TemplateEmbedding(c.template, gc)(
+    #       pair_activations,
+    #       template_batch,
+    #       mask_2d,
+    #       is_training=is_training)
 
-      pair_activations += template_pair_representation
+      dca_pair_representation = []
+
+      pair_activations += dca_pair_representation
 
     # Embed extra MSA features.
     # Jumper et al. (2021) Suppl. Alg. 2 "Inference" lines 14-16

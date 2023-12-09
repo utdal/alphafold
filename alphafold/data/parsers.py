@@ -334,7 +334,7 @@ def remove_empty_columns_from_stockholm_msa(stockholm_msa: str) -> str:
       unprocessed_lines[i] = line
     else:
       processed_lines[i] = line
-  return '\n'.join((processed_lines[i] for i in range(len(processed_lines))))
+  return '\n'.join((processed_lines[i] for i in range(len(processed_lines)-1)))
 
 
 def deduplicate_stockholm_msa(stockholm_msa: str) -> str:
